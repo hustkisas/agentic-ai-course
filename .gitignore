@@ -1,3 +1,7 @@
 .venv/
 site/
 __pycache__/
+# Safety: never publish PDFs or local-only notes to the public site
+*.pdf
+*.local.md
+local-notes/
