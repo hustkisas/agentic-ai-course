@@ -1,0 +1,115 @@
+site_name: Agentic AI — Self-Study Course
+site_url: https://hustkisas.github.io/agentic-ai-course/
+site_description: An 11-week hands-on path from LLM fundamentals to a deployed agent.
+repo_url: https://github.com/hustkisas/agentic-ai-course
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - toc.follow
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - tables
+  - toc:
+      permalink: true
+plugins:
+  - search
+nav:
+  - Home: index.md
+  - How to use this site: guide.md
+  - "Phase 0 — Foundations":
+    - "Week 1 · Foundations (Jul 6–12)":
+      - "Python async/await deep dive": week01/01-python-async-await-deep-dive.md
+      - "HTTP, JSON, REST & SSE streaming": week01/02-http-json-rest-sse-streaming.md
+      - "LLM mental model + Karpathy 'Intro to LLMs'": week01/03-llm-mental-model-karpathy-intro-to-llms.md
+      - "PROJECT: raw HTTP script that streams an LLM ...": week01/04-project-raw-http-script-that-streams-an-.md
+      - "Weekly review + plan next week": week01/05-weekly-review-plan-next-week.md
+  - "Phase 1 — LLM fundamentals & prompting":
+    - "Week 2 · Prompting & tool calling (Jul 13–19)":
+      - "Prompting: system prompts, few-shot, structur...": week02/01-prompting-system-prompts-few-shot-struct.md
+      - "Tool / function calling concepts": week02/02-tool-function-calling-concepts.md
+      - "Read Anthropic 'Building Effective Agents'": week02/03-read-anthropic-building-effective-agents.md
+      - "PROJECT: add one tool + wire call→execute→fee...": week02/04-project-add-one-tool-wire-call-execute-f.md
+      - "Weekly review + plan next week": week02/05-weekly-review-plan-next-week.md
+  - "Phase 2 — Agent loop & core methods":
+    - "Week 3 · The agent loop (Jul 20–26)":
+      - "The Agent Loop": week03/01-the-agent-loop.md
+      - "ReAct pattern (reason + act)": week03/02-react-pattern-reason-act.md
+      - "Design your own loop architecture": week03/03-design-your-own-loop-architecture.md
+      - "Start building a minimal agent from scratch": week03/04-start-building-a-minimal-agent-from-scra.md
+      - "Weekly review + plan next week": week03/05-weekly-review-plan-next-week.md
+    - "Week 4 · Build the agent (Jul 27–Aug 2)":
+      - "Build loop: tool registry + execution": week04/01-build-loop-tool-registry-execution.md
+      - "Add error handling, retries, iteration guard": week04/02-add-error-handling-retries-iteration-gua.md
+      - "Multi-step task test + debug": week04/03-multi-step-task-test-debug.md
+      - "PROJECT: from-scratch multi-tool agent": week04/04-project-from-scratch-multi-tool-agent.md
+      - "Weekly review + plan next week": week04/05-weekly-review-plan-next-week.md
+    - "Week 5 · Context & memory (Aug 3–9)":
+      - "Context window management + study Pi compacti...": week05/01-context-window-management-study-pi-compa.md
+      - "Token estimation & cost tracking": week05/02-token-estimation-cost-tracking.md
+      - "Embeddings & vector search fundamentals": week05/03-embeddings-vector-search-fundamentals.md
+      - "RAG theory: chunking, retrieval, re-ranking": week05/04-rag-theory-chunking-retrieval-re-ranking.md
+      - "Weekly review + plan next week": week05/05-weekly-review-plan-next-week.md
+    - "Week 6 · RAG build (Aug 10–16)":
+      - "Set up a local vector DB (Chroma or FAISS)": week06/01-set-up-a-local-vector-db-chroma-or-faiss.md
+      - "Build ingestion + chunking pipeline": week06/02-build-ingestion-chunking-pipeline.md
+      - "Wire retrieval into your agent as a tool": week06/03-wire-retrieval-into-your-agent-as-a-tool.md
+      - "PROJECT: RAG agent over your own docs": week06/04-project-rag-agent-over-your-own-docs.md
+      - "Weekly review + plan next week": week06/05-weekly-review-plan-next-week.md
+  - "Phase 3 — Orchestration & multi-agent":
+    - "Week 7 · Frameworks (Aug 17–23)":
+      - "LangGraph fundamentals": week07/01-langgraph-fundamentals.md
+      - "Rebuild your Phase-2 agent in LangGraph": week07/02-rebuild-your-phase-2-agent-in-langgraph.md
+      - "OpenAI / Anthropic Agents SDK overview": week07/03-openai-anthropic-agents-sdk-overview.md
+      - "MCP (Model Context Protocol) intro + connect ...": week07/04-mcp-model-context-protocol-intro-connect.md
+      - "Weekly review + plan next week": week07/05-weekly-review-plan-next-week.md
+    - "Week 8 · Multi-agent (Aug 24–30)":
+      - "Multi-agent patterns": week08/01-multi-agent-patterns.md
+      - "Study Pi orchestrator (supervisor.ts)": week08/02-study-pi-orchestrator-supervisor-ts.md
+      - "Build a supervisor + 2 sub-agents": week08/03-build-a-supervisor-2-sub-agents.md
+      - "PROJECT: multi-agent delegation system": week08/04-project-multi-agent-delegation-system.md
+      - "Weekly review + plan next week": week08/05-weekly-review-plan-next-week.md
+  - "Phase 4 — Harness engineering":
+    - "Week 9 · Harness engineering (Aug 31–Sep 6)":
+      - "Session persistence & branching trees": week09/01-session-persistence-branching-trees.md
+      - "Streaming architecture end-to-end": week09/02-streaming-architecture-end-to-end.md
+      - "Multi-provider abstraction & auth": week09/03-multi-provider-abstraction-auth.md
+      - "PROJECT: add persistence + retry policy + new...": week09/04-project-add-persistence-retry-policy-new.md
+      - "Weekly review + plan next week": week09/05-weekly-review-plan-next-week.md
+  - "Phase 5 — Eval & observability":
+    - "Week 10 · Eval & observability (Sep 7–13)":
+      - "Why evals: non-determinism + build a task suite": week10/01-why-evals-non-determinism-build-a-task-s.md
+      - "LLM-as-judge + regression tests": week10/02-llm-as-judge-regression-tests.md
+      - "Tracing / observability (LangSmith or Langfuse)": week10/03-tracing-observability-langsmith-or-langf.md
+      - "PROJECT: eval suite + tracing on your agent": week10/04-project-eval-suite-tracing-on-your-agent.md
+      - "Weekly review + plan next week": week10/05-weekly-review-plan-next-week.md
+  - "Phase 6 — Deployment & capstone":
+    - "Week 11 · Deployment + capstone (Sep 14–20)":
+      - "Wrap agent behind a FastAPI endpoint (streaming)": week11/01-wrap-agent-behind-a-fastapi-endpoint-str.md
+      - "Dockerize + secrets/env management": week11/02-dockerize-secrets-env-management.md
+      - "Deploy to cloud (Render / Railway / Fly)": week11/03-deploy-to-cloud-render-railway-fly.md
+      - "CAPSTONE: deployed agent + evals + tracing, d...": week11/04-capstone-deployed-agent-evals-tracing-do.md
+      - "Final review + plan next steps": week11/05-final-review-plan-next-steps.md
